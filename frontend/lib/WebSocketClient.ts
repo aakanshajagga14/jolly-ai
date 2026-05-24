@@ -16,7 +16,8 @@ function shouldUseMock(options: WebSocketClientOptions): boolean {
   if (options.useMock !== undefined) {
     return options.useMock;
   }
-  return process.env.NEXT_PUBLIC_USE_MOCK_WS !== 'false';
+  // Default is real mode — only use mock if explicitly opted in
+  return process.env.NEXT_PUBLIC_USE_MOCK_WS === 'true';
 }
 
 function buildWsUrl(wsUrl: string, token: string): string {

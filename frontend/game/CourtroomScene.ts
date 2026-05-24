@@ -63,8 +63,9 @@ export class CourtroomScene extends Phaser.Scene {
   create(): void {
     const { width, height } = this.scale;
 
-    this.background = this.add.image(0, 0, COURTROOM_BG_KEY).setOrigin(0, 0);
-    const scaleX = width / this.background.width;
+    // Center the background so overflow clips symmetrically on both sides
+    this.background = this.add.image(width / 2, height / 2, COURTROOM_BG_KEY).setOrigin(0.5, 0.5);
+    const scaleX = width  / this.background.width;
     const scaleY = height / this.background.height;
     this.background.setScale(Math.max(scaleX, scaleY));
 

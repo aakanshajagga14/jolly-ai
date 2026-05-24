@@ -58,7 +58,11 @@ export class MicrophoneCapture {
 
       source.connect(this.workletNode);
       this.setState('active');
-    } catch {
+    } catch (err) {
+      console.error(
+        '[MicrophoneCapture] Microphone access failed — falling back to SILENT mock mode. Speech will NOT be transcribed.',
+        err
+      );
       this.startMockCapture();
     }
   }

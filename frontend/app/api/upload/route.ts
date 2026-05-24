@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { createUpload } from '@/lib/server/uploadStore';
+import { createUpload, processUpload } from '@/lib/server/uploadStore';
 
 const MAX_BYTES = 20 * 1024 * 1024;
 
@@ -24,7 +24,14 @@ export async function POST(request: Request): Promise<NextResponse> {
       return NextResponse.json({ message: 'File exceeds 20 MB limit.' }, { status: 400 });
     }
 
+    const arrayBuffer = await file.arrayBuffer();
+    const buffer = Buffer.from(arrayBuffer);
+
     const record = createUpload(file.name);
+
+    // Fire-and-forget — frontend polls /api/upload/:id/status
+    void processUpload(record.uploadId, buffer);
+
     return NextResponse.json({ uploadId: record.uploadId });
   } catch {
     return NextResponse.json({ message: 'Upload failed.' }, { status: 500 });
