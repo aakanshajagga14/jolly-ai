@@ -31,45 +31,6 @@ https://github.com/user-attachments/assets/7c4c611e-609a-40a5-81f7-2933686d8110
 
 ---
 
-## Getting started
-
-
-### Install & run
-
-```bash
-git clone https://github.com/aakanshajagga14/jolly-ai.git
-cd jolly-ai/frontend
-npm install
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000).
-
-### Environment variables
-
-Copy the example file and adjust if needed:
-
-```bash
-cp .env.local.example .env.local
-```
-
-| Variable | Default | Description |
-|----------|---------|-------------|
-| `NEXT_PUBLIC_USE_MOCK_WS` | `true` | Use mock WebSocket session (no real server required) |
-| `NEXT_PUBLIC_WS_URL` | `ws://localhost:8080/ws` | WebSocket URL when mock mode is disabled |
-
-With mock mode enabled, the app simulates a full cross-examination timeline (~25 s) including transcript entries, animations, and coaching hints.
-
-### Production build
-
-```bash
-cd frontend
-npm run build
-npm start
-```
-
----
-
 ## License
 
 This project is provided as-is for development and demonstration. 
