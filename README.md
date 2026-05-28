@@ -26,7 +26,7 @@ https://github.com/user-attachments/assets/7c4c611e-609a-40a5-81f7-2933686d8110
 | UI | Next.js 16 (App Router), React 19, TypeScript, Tailwind CSS 4 |
 | Game canvas | Phaser.js 4 (≥ 30 FPS, pixel-art rendering) |
 | Events | mitt EventBus |
-| API | Gemini, Deepgram and Silk |
+| API | Gemini, Deepgram, Silk |
 | Backend | Node.js, Deepgram STT, Gemini, RumiK SILK TTS, Harvey MCP |
 
 ---
