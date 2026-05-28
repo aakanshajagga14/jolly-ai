@@ -3,7 +3,8 @@
 **Pixel-art legal cross-examination simulator** — upload a case PDF, enter a live courtroom session, and cross-examine AI-driven witness and judge agents while a Phaser.js canvas animates the scene in sync with dialogue.
 
 
-https://github.com/user-attachments/assets/794e6d2f-4510-49b4-bca9-0d7a1e00c1d7
+https://github.com/user-attachments/assets/7c4c611e-609a-40a5-81f7-2933686d8110
+
 
 
 ---
